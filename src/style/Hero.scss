@@ -1,0 +1,168 @@
+@import './Base.scss';
+
+.hero-container {
+    height: 100vh;
+}
+
+.navigation {
+    font-family: 'Fondamento', cursive;
+    font-size: 1.6rem;
+
+    &__itemsList {
+        height: 8.5rem;
+        display: flex;
+        flex-direction: row;
+        place-items: center;
+        justify-content: space-between;
+    }
+
+    &__item {
+        backface-visibility: hidden; // w celu naprawy buga gdy linia sie chowa w Narzędzia i Kontakt, bo w tych przypadkach zostaje mała linia, nie chowa sie do konca
+
+        &:after {
+            content: '';
+            display: block;
+            width: 0;
+            height: .2rem;
+            background-color: $orange;
+            transition: width .6s;
+        }
+
+        &:hover {
+            cursor: pointer;
+
+            &:after {
+                width: 100%;
+            }
+
+            &:first-letter {
+                color: $orange;
+            }
+
+            /*rozwiązanie problemu niedziałającego first-letter na spanie 
+            https://stackoverflow.com/questions/7631722/css-first-letter-not-working */
+            span::first-letter {
+                color: $orange;
+            }
+
+            span {
+                display: inline-block;
+            }
+        }
+
+        &--middle {
+            display: inline-block;
+            margin: 0 2rem;
+        }
+    }
+
+    &__timeItem {
+        cursor: default;
+    }
+}
+
+.scroll-navigation {
+    //float: right;
+    position: fixed;
+    right: 9%;
+    top: 50%;
+    transform: translate(-9%, -50%);
+
+    &__item {
+        width: 3rem;
+        height: 3rem;
+        border: .1rem solid white;
+        border-radius: 100rem;
+        margin: 2rem 0;
+        cursor: pointer;
+        transition: all .5s;
+
+        &--active {
+            background-color: $orange;
+        }
+
+        &:before {
+            font-family: 'Fondamento', cursive;
+            position: relative;
+            top: 25%;
+            right: 0%;
+            visibility: hidden;
+            font-size: 0rem;
+            transition: all .5s;
+        }
+
+        &:hover {
+            background-color: $orange;
+
+            &:before {
+                top: 25%;
+                //right: 250%;
+                visibility: visible;
+                font-size: 1rem;
+            }
+        }
+
+        &--mainSite {
+            &:before {
+                content: 'Strona główna';
+                white-space: nowrap;
+            }
+
+            &:hover {
+                &:before {
+                    right: 250%;
+                }
+            }
+        }
+
+        &--projects {
+            &:before {
+                content: 'Projekty';
+            }
+
+            &:hover {
+                &:before {
+                    right: 170%;
+                }
+            }
+        }
+
+        &--tools {
+            &:before {
+                content: 'Narzędzia';
+            }
+
+            &:hover {
+                &:before {
+                    right: 190%;
+                }
+            }
+        }
+
+        &--aboutMe {
+            &:before {
+                content: 'O mnie';
+                white-space: nowrap;
+            }
+
+            &:hover {
+                &:before {
+                    right: 150%;
+                }
+            }
+        }
+
+        &--contact {
+            &:before {
+                content: 'Kontakt';
+                white-space: nowrap;
+            }
+
+            &:hover {
+                &:before {
+                    right: 170%;
+                }
+            }
+        }
+    }
+}
