@@ -77,7 +77,7 @@
 .scroll-navigation {
     //float: right;
     position: fixed;
-    right: 14rem;
+    right: 13.9rem;
     top: 50%;
     //transform: translate(-9%, -50%);
     transform: translateY(-50%);
@@ -92,6 +92,9 @@
         margin: 2rem 0;
         cursor: pointer;
         transition: all .5s;
+        //transform: translateZ(0) scale(1.0, 1.0);
+        display: block;
+        font-size: 0;
 
         &--active {
             background-color: $orange;
@@ -104,7 +107,8 @@
             right: 0%;
             visibility: hidden;
             font-size: 0rem;
-            transition: all .5s;
+            transition: all linear .3s;
+            //transform: translateZ(0) scale(1.0, 1.0);
         }
 
         &:hover {
@@ -228,6 +232,11 @@
     background-color: $orange;
     color: #fff;
     font-family: 'Josefin Sans', sans-serif;
+
+    &:active {
+        box-shadow: inset 0px 0px 5px darken($orange, 50%);
+        background: darken($orange, 5%);
+    }
 }
 
 //50  w468, h425
