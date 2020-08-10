@@ -1,3 +1,105 @@
-.projects {
+@import './Base.scss';
+
+.projects-container {
     height: 100vh;
+    //padding: 14rem 0;
+    display: grid;
+    //place-items: center;
+    width: 90%;
+    /*     display: flex;
+    place-items: center; */
+
+    /* grid-template-columns: repeat(2, 1fr);
+    place-items: center; */
+
+    display: grid;
+    grid-template-columns: repeat(2, 500px);
+    grid-template-rows: 400px;
+    grid-template-areas: "infoGrid illustrationGrid";
+    grid-gap: 8%;
+    align-content: center;
+}
+
+.project {
+    width: 100%;
+    margin-right: 20px;
+    grid-area: infoGrid;
+    //align-self: center;
+
+    &__title {
+        font-size: calc(18px + (44 - 18) * ((100vw - 762px) / (1900 - 762)));
+    }
+
+    &__description {
+        font-size: 20px;
+        line-height: 45px;
+    }
+}
+
+.title-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.arrow {
+    align-self: center;
+    display: inline-block;
+    font-size: 3.5rem;
+    color: $orange;
+    cursor: pointer;
+    box-shadow: 0 0 0 3px white;
+    border-radius: 5rem;
+
+    &:hover {
+        color: darken($orange, 5%);
+    }
+
+    &:active {
+        color: darken($orange, 5%);
+        box-shadow: 0 0 0 2px white;
+    }
+}
+
+/* .project-imgContainer {
+    width: 705px;
+    height: 476px;
+} */
+
+.project-imgContainer {
+    grid-area: illustrationGrid;
+    //align-self: center;
+}
+
+.project__img {
+    width: 100%;
+    height: 100%;
+}
+
+
+//Wszystko ma 1525/805    137.5px
+
+//Obrazek 705/476
+//Kontener z napisami 636/502
+//Napis Projekt 1  czcionka 50px, line 57
+//Opis 24px line 45
+
+
+/* ANIMATIONS */
+.slide-enter {
+    opacity: 0;
+    transition: all .7s;
+}
+
+.slide-enter-active {
+    opacity: 1;
+    transition: all .7s;
+}
+
+.slide-exit {
+    opacity: 0;
+    transition: all .7s;
+}
+
+.slide-exit-active {
+    display: none;
 }
