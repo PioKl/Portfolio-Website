@@ -1,13 +1,28 @@
 import React, { useState } from 'react';
 import '../style/Projects.scss';
+import data from '../data/data.json';
 import projectImg1 from '../images/projectImg1.png';
-import projectImg2 from '../images/laptop.png';
+import projectImg2 from '../images/projectImg2.png';
+import projectImg3 from '../images/projectImg3.png';
+import projectImg4 from '../images/projectImg4.png';
+import projectImg5 from '../images/projectImg5.png';
+import projectImg6 from '../images/projectImg6.png';
+import projectImg7 from '../images/projectImg7.png';
+import projectImg8 from '../images/projectImg8.png';
+import projectImg9 from '../images/projectImg9.png';
+
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 
 
 const Projects = () => {
     const [count, setCount] = useState(0);
-    const projectImages = [projectImg1, projectImg2];
+
+    const projectImages = [projectImg1, projectImg2, projectImg3, projectImg4, projectImg5, projectImg6, projectImg7, projectImg8, projectImg9];
+
+    const projectLink = ["https://piokl.github.io/Memes-Generator/", "https://piokl.github.io/ToDoRedux/", "https://piokl.github.io/Hamburger/", "https://piokl.github.io/REST-Countries-API/", "https://piokl.github.io/Job-listings-with-filtering/", "https://piokl.github.io/DrinkSearchApp/", "https://piokl.github.io/Rock-Paper-Scissors-Game/", "https://piokl.github.io/HangMan-Game/", "https://piokl.github.io/ToDoList-React/"]
+
+    const projectTitle = ["Memes-Generator", "ToDoRedux", "Hamburger", "REST-Countries-API", "Job-listings-with-filtering", "DrinkSearchApp", "Rock-Paper-Scissors-Game", "HangMan-Game", "ToDoList-React"];
+
     const handlePreviousProject = () => {
         setCount(count - 1);
         if (count <= 0) {
@@ -20,20 +35,26 @@ const Projects = () => {
             setCount(0)
         }
     }
+
     /*     console.log(count)
         console.log(projectImages.length - 1) */
     return (
         <div id="projects" className="projects-container">
             <div className="project">
-                <div className="title-container">
-                    <h1 className="project__title">Project 1</h1>
+                <div className="project__title-container">
+                    <h1 className="project__title">{data[count].title}</h1>
+                    {/* <h1 className="project__title">{projectTitle[count]}</h1> */}
                     {/*                     <button className="arrow" onClick={handlePreviousProject}>back</button>
                     <button className="arrow" onClick={handleNextProject}>forward</button> */}
-                    <i onClick={handleNextProject} className="arrow fas fa-arrow-alt-circle-left"></i>
-                    <i onClick={handlePreviousProject} className="arrow fas fa-arrow-alt-circle-right"></i>
-
+                    <div className='project__buttons-container'>
+                        <i onClick={handlePreviousProject} className="project__arrow-button fas fa-arrow-alt-circle-left"></i>
+                        <i onClick={handleNextProject} className="project__arrow-button fas fa-arrow-alt-circle-right"></i>
+                    </div>
                 </div>
-                <p className="project__description">Aplikacja, której zadaniem jest wyświetlenie memów, które pobierane są poprzez API, wyszukania go (wyszukiwanie ze względu na wpisane słowo, ale także dostępna jest "drop-down lista", która zawiera interesujące użytkownika memy), a następnie możliwości utworzenia własnego mema (liczba tekstów w obrazku jest różna i zależy od tego na ile dany mem pozwala). Głównie wykorzystywane jest REST API i Routing.</p>
+                <div className='spr'>
+                    <p className="project__description">{data[count].description}</p>
+                    {/* <p className="project__description">Aplikacja, której zadaniem jest wyświetlenie memów, które pobierane są poprzez API, wyszukania go (wyszukiwanie ze względu na wpisane słowo, ale także dostępna jest "drop-down lista", która zawiera interesujące użytkownika memy), a następnie możliwości utworzenia własnego mema (liczba tekstów w obrazku jest różna i zależy od tego na ile dany mem pozwala). Głównie wykorzystywane jest REST API i Routing.</p> */}
+                </div>
             </div>
             {/*             <div className="project-imgContainer">
                 <img className="project__img" src={projectImages[count]} alt="" />
@@ -44,7 +65,7 @@ const Projects = () => {
                     timeout={450}
                     classNames="slide"
                 >
-                    <img className="project__img" src={projectImages[count]} alt="" />
+                    <a href={projectLink[count]} target="_blank" rel="noopener noreferrer"><img className="project__img" src={projectImages[count]} alt="" /></a>
                 </CSSTransition>
             </TransitionGroup>
         </div>
