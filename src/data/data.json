@@ -1,0 +1,47 @@
+[{
+        "id": 1,
+        "title": "Memes-Generator",
+        "description": "Aplikacja, której zadaniem jest wyświetlenie memów, które pobierane są poprzez API, wyszukania go (wyszukiwanie ze względu na wpisane słowo, ale także dostępna jest \"drop-down lista\", która zawiera interesujące użytkownika memy), a następnie możliwości utworzenia własnego mema (liczba tekstów w obrazku jest różna i zależy od tego na ile dany mem pozwala). Głównie wykorzystywane jest REST API i Routing (REACT, REST API, Routing, HTML, CSS, SASS)."
+    },
+    {
+        "id": 2,
+        "title": "ToDoRedux",
+        "description": "ToDo lista (CRUD) utworzona przede wszystkim za pomocą Reduxa, ale również zostało wykorzystane Context API, a także Hooksy. Zawiera opcję wyszukiwania każdego zadania, pofiltrowania zadań według kategorii, wykonania."
+    },
+    {
+        "id": 3,
+        "title": "Hamburger",
+        "description": "Aplikacja umożliwiająca stworzenie własnego burgera. Głównie w niej wykorzystywane jest ContextApi wraz z Hookami w celu stworzenia zmiany języka aplikacji, trybu ciemnego/jasnego, używania składników w różnych komponentach, czy dodawania składników do zamówienia i ich usuwania."
+    },
+    {
+        "id": 4,
+        "title": "REST-Countries-API",
+        "description": "Aplikacja ma za zadanie wyświetlić dany kraj z jego danymi. Kliknięciu w dany kraj spwoduje przeniesienie się do szczegółowych danych kraju. W aplikacji zostało wykorzystane Context Api w celu pobrania danych, istnieje możliwość wyszukiwania, pofiltrowania krajów, włączenia jasnego i ciemnego motywu. Aplikacja korzysta z Routingu."
+    },
+    {
+        "id": 5,
+        "title": "Job-listings-with-filtering",
+        "description": "Głównym zadaniem aplikacji jest możliwość wyszukania interesującej oferty pracy. Zawiera filtry, które pomagają wszukać daną ofertę na podstawie wybranych kategorii. W aplikacji utworzyłem własne API (https://jsonbin.io/), w którym trzymane są dane dotyczące ofert w formacie json. Wykorzystuję tu także Hooksy i axiosa."
+    },
+    {
+        "id": 6,
+        "title": "DrinkSearchApp",
+        "description": "Aplikacja ma za zadanie wyszukania interesującego użytkownika drinka. Każdy drink zawiera zdjęcie, sposób przygotowania, wymagane składniki, a także słowniczek wyjaśniający wartość danych jednostek. Dane są pobierane poprzez Rest API."
+    },
+    {
+        "id": 7,
+        "title": "Rock-Paper-Scissors-Game",
+        "description": "Gra papier, kamień, nożyce z możliwością wybrania rozszerzonej wersji (papier, kamień, nożyce, jaszczurka, spock. Aplikacja działa na zasadzie wyboru gracza, a następnie losowego wyboru komputera. Czas wyboru przeciwnika AI jest celowo opóźniony, aby dać złudzenie jego \"myślenia\", w trakcie losowania wyboru występuje animacja."
+    },
+    {
+        "id": 8,
+        "title": "HangMan-Game",
+        "description": "Gra wisielec, która polega na odgadnięciu nazwy zwierzęcia. Użytkownik ma do wyboru klawiaturę, która pokazuje jego prawidłowe, jak i złe wybory (odpowiednio kolor zielony i czerwony). W trakcie gry zliczane są punkty, pięć złych wyborów oznacza przegraną, a każdy zły wybór do dodatkowy element rysunku \"wisielca\"."
+    },
+    {
+        "id": 9,
+        "title": "ToDoList-React",
+        "description": "Klasyczna ToDo lista utworzona w React, a zarazem moja pierwsza aplikacja utworzona w React."
+    }
+
+]
