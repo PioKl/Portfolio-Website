@@ -19,10 +19,6 @@ const Projects = () => {
 
     const projectImages = [projectImg1, projectImg2, projectImg3, projectImg4, projectImg5, projectImg6, projectImg7, projectImg8, projectImg9];
 
-    const projectLink = ["https://piokl.github.io/Memes-Generator/", "https://piokl.github.io/ToDoRedux/", "https://piokl.github.io/Hamburger/", "https://piokl.github.io/REST-Countries-API/", "https://piokl.github.io/Job-listings-with-filtering/", "https://piokl.github.io/DrinkSearchApp/", "https://piokl.github.io/Rock-Paper-Scissors-Game/", "https://piokl.github.io/HangMan-Game/", "https://piokl.github.io/ToDoList-React/"]
-
-    const projectTitle = ["Memes-Generator", "ToDoRedux", "Hamburger", "REST-Countries-API", "Job-listings-with-filtering", "DrinkSearchApp", "Rock-Paper-Scissors-Game", "HangMan-Game", "ToDoList-React"];
-
     const handlePreviousProject = () => {
         setCount(count - 1);
         if (count <= 0) {
@@ -65,7 +61,7 @@ const Projects = () => {
                     timeout={450}
                     classNames="slide"
                 >
-                    <a href={projectLink[count]} target="_blank" rel="noopener noreferrer"><img className="project__img" src={projectImages[count]} alt="" /></a>
+                    <a href={data[count].link} target="_blank" rel="noopener noreferrer"><img className="project__img" src={projectImages[count]} alt="" /></a>
                 </CSSTransition>
             </TransitionGroup>
         </div>
