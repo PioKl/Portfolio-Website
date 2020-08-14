@@ -14,7 +14,7 @@
     display: grid;
     grid-template-columns: repeat(2, 500px);
     grid-template-rows: 300px;
-    grid-template-areas: "projectGrid projectImgGrid";
+    grid-template-areas: "projectGrid projectImgGrid""buttonGrid buttonGrid";
     gap: 8%;
     align-content: center;
 }
@@ -123,6 +123,19 @@
 
 .slide-exit-active {
     display: none;
+}
+
+
+.project-buttonContainer {
+    grid-area: buttonGrid;
+    width: 25rem;
+    justify-self: center;
+    //align-self: end;
+    transform: translateY(100%);
+}
+
+.button--github {
+    font-size: calc(14px + (20 - 14) * ((100vw - 762px) / (1900 - 762)));
 }
 
 /* .spr {
