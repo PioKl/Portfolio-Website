@@ -32,29 +32,20 @@ const Projects = () => {
         }
     }
 
-    /*     console.log(count)
-        console.log(projectImages.length - 1) */
     return (
         <div id="projects" className="projects-container">
             <div className="project">
                 <div className="project__title-container">
                     <h1 className="project__title">{data[count].title}</h1>
-                    {/* <h1 className="project__title">{projectTitle[count]}</h1> */}
-                    {/*                     <button className="arrow" onClick={handlePreviousProject}>back</button>
-                    <button className="arrow" onClick={handleNextProject}>forward</button> */}
                     <div className='project__buttons-container'>
                         <i onClick={handlePreviousProject} className="project__arrow-button fas fa-arrow-alt-circle-left"></i>
                         <i onClick={handleNextProject} className="project__arrow-button fas fa-arrow-alt-circle-right"></i>
                     </div>
                 </div>
-                <div className='spr'>
-                    <p className="project__description">{data[count].description}</p>
-                    {/* <p className="project__description">Aplikacja, której zadaniem jest wyświetlenie memów, które pobierane są poprzez API, wyszukania go (wyszukiwanie ze względu na wpisane słowo, ale także dostępna jest "drop-down lista", która zawiera interesujące użytkownika memy), a następnie możliwości utworzenia własnego mema (liczba tekstów w obrazku jest różna i zależy od tego na ile dany mem pozwala). Głównie wykorzystywane jest REST API i Routing.</p> */}
-                </div>
+                {/*         <div className='spr'> */}
+                <p className="project__description">{data[count].description}</p>
+                {/*                 </div> */}
             </div>
-            {/*             <div className="project-imgContainer">
-                <img className="project__img" src={projectImages[count]} alt="" />
-            </div> */}
             <TransitionGroup className="project-imgContainer">
                 <CSSTransition
                     key={count}
@@ -64,6 +55,10 @@ const Projects = () => {
                     <a href={data[count].link} target="_blank" rel="noopener noreferrer"><img className="project__img" src={projectImages[count]} alt="" /></a>
                 </CSSTransition>
             </TransitionGroup>
+            <div className="project-buttonContainer">
+                <button className="button button--github"><a href="https://github.com/PioKl" target="_blank" rel="noopener noreferrer">Profil na github</a></button>
+            </div>
+
         </div>
     );
 }
