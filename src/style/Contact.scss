@@ -1,3 +1,41 @@
 .contact-container {
     height: 100vh;
+    width: 90%;
+    //@include margins;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /*     display: grid;
+    justify-content: center;
+    align-content: center; */
+}
+
+.contact-titleContainer {
+    margin-bottom: 5rem;
+}
+
+.contact-form {
+    display: grid;
+    gap: 0%;
+    width: 35rem;
+
+    &__input {
+        padding: .5rem;
+        margin: 1rem 0;
+        //border-radius: .5rem;
+        border: 0;
+        background-color: rgba(255, 255, 255, 0.877);
+
+        &--message {
+            height: 15rem;
+            resize: none;
+        }
+    }
+}
+
+.button--submit {
+    margin: 1rem 0;
+    border-radius: 0;
+
 }
