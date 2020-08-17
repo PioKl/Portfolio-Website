@@ -42,9 +42,7 @@ const Projects = () => {
                         <i onClick={handleNextProject} className="project__arrow-button fas fa-arrow-alt-circle-right"></i>
                     </div>
                 </div>
-                {/*         <div className='spr'> */}
                 <p className="project__description">{data[count].description}</p>
-                {/*                 </div> */}
             </div>
             <TransitionGroup className="project-imgContainer">
                 <CSSTransition
@@ -52,7 +50,7 @@ const Projects = () => {
                     timeout={450}
                     classNames="slide"
                 >
-                    <a href={data[count].link} target="_blank" rel="noopener noreferrer"><img className="project__img" src={projectImages[count]} alt="" /></a>
+                    <a href={data[count].link} target="_blank" rel="noopener noreferrer"><img className="project-imgContainer__img" src={projectImages[count]} alt="" /></a>
                 </CSSTransition>
             </TransitionGroup>
             <div className="project-buttonContainer">
