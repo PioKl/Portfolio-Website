@@ -1,3 +1,48 @@
+//@import './Base.scss';
+@import './App.scss';
+
 .aboutMe-container {
     height: 100vh;
+    width: 90%;
+    display: grid;
+    grid-template-columns: 1fr 400px;
+    //place-items: center;
+    //margin: 20rem 0;
+    @include margins;
 }
+
+.aboutMe {
+    font-size: 1.8rem;
+    line-height: 4.5rem;
+    text-align: justify;
+    align-self: center;
+
+    /*     display: flex;
+    flex-direction: column; */
+    &__title {
+        margin-bottom: 2rem;
+    }
+
+    &__description {
+        color: $gray;
+    }
+}
+
+.cv {
+    align-self: center;
+    justify-self: end;
+    margin-right: 5rem;
+}
+
+.button--cv {
+    border-radius: 100rem;
+    width: 20rem;
+    height: 20rem;
+    font-size: calc(14px + (20 - 14) * ((100vw - 762px) / (1900 - 762)));
+}
+
+//tytul 50
+//czcionka 24
+//w956/h579
+
+//kolo w364/h335/ czcionka 40
