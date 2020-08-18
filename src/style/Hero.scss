@@ -17,7 +17,7 @@
 }
 
 .navigation {
-    font-family: 'Fondamento', cursive;
+    font-family: $fontOne;
     font-size: calc(10px + (16 - 10) * ((100vw - 762px) / (1900 - 762)));
     //font-size: 1.6rem;
     //font-size: 1vw; //1.2
@@ -102,7 +102,7 @@
         }
 
         &:before {
-            font-family: 'Fondamento', cursive;
+            font-family: $fontOne;
             position: relative;
             top: 25%;
             right: 0%;
@@ -194,7 +194,7 @@
     //width: calc(190px + (330 - 190) * ((100vw - 762px) / (1900 - 762)));
     //width: 19rem;
     width: calc(230px + (330 - 230) * ((100vw - 762px) / (1900 - 762)));
-    font-family: 'Fondamento', cursive;
+    font-family: $fontOne;
     position: absolute;
     top: 50%;
     left: 50%;
