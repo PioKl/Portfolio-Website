@@ -48,7 +48,8 @@
     &__title {
         //font-size: calc(18px + (44 - 18) * ((100vw - 762px) / (1900 - 762)));
         font-size: 2.6rem;
-        //align-self: center;
+        align-self: flex-end; //center
+        font-family: $fontFour;
     }
 
     &__arrow-button {
@@ -74,6 +75,7 @@
         font-size: 1.8rem;
         line-height: 45px;
         text-align: justify;
+        font-family: $fontFour;
     }
 }
 
