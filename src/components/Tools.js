@@ -4,12 +4,12 @@ import "../style/Tools.scss";
 const Tools = () => {
     return (
         <div id="tools" className="tools-container">
-            <div className="tools-titleContainer">
+            <div data-aos="zoom-out" className="tools-titleContainer">
                 <h1 className="tools-titleContainer__title">Narzędzia z których korzystam</h1>
             </div>
             <div className="tools">
 
-                <div className="imagesPartOne">
+                <div data-aos="fade-right" className="imagesPartOne">
                     <div title="html" className="imagesPartOne__img imagesPartOne__img--html"></div>
                     <div className="imagesPartOne__empty-0"></div>
                     <div title="javaScript" className="imagesPartOne__img imagesPartOne__img--js"></div>
@@ -21,7 +21,7 @@ const Tools = () => {
                     <div title="css" className="imagesPartOne__img imagesPartOne__img--css"></div>
                 </div>
 
-                <div className="imagesPartTwo">
+                <div data-aos="fade-left" className="imagesPartTwo">
                     <div title="github" className="imagesPartTwo__img imagesPartTwo__img--github"></div>
                     <div className="imagesPartTwo__empty-0"></div>
                     <div title="bootstrap" className="imagesPartTwo__img imagesPartTwo__img--bootstrap"></div>
