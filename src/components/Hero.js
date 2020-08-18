@@ -48,7 +48,7 @@ const Hero = () => {
     return (
         <div id="mainSite" className="hero-container">
             <div className="navigation">
-                <ul className="navigation__itemsList">
+                <ul data-aos="fade-down" className="navigation__itemsList">
                     <li /* onClick={handleScrollMainSite} */ className="navigation__item navigation__item">
                         <a href="#mainSite">Strona <span className="navigation__item--mainSite">główna</span></a>
                     </li>
@@ -88,8 +88,8 @@ const Hero = () => {
             </div>
 
             <div className="hero-info">
-                <h1 className="hero-info__heading">Cześć, jestem Piotr i tworzę aplikacje w React oraz strony internetowe!</h1>
-                <a href="#projects"><button /* onClick={handleScrollProjects} */ className="hero-info__button button">Sprawdź moje projekty</button></a>
+                <h1 data-aos="fade-right" className="hero-info__heading">Cześć, jestem Piotr i tworzę aplikacje w React oraz strony internetowe!</h1>
+                <a href="#projects"><button /* onClick={handleScrollProjects} */ data-aos="fade-up" className="hero-info__button button">Sprawdź moje projekty</button></a>
             </div>
 
 
