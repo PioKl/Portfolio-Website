@@ -34,7 +34,7 @@ const Projects = () => {
 
     return (
         <div id="projects" className="projects-container">
-            <div className="project">
+            <div data-aos="fade-right" className="project">
                 <div className="project__title-container">
                     <h1 className="project__title">{data[count].title}</h1>
                     <div className='project__buttons-container'>
@@ -44,7 +44,7 @@ const Projects = () => {
                 </div>
                 <p className="project__description">{data[count].description}</p>
             </div>
-            <TransitionGroup className="project-imgContainer">
+            <TransitionGroup data-aos="fade-left" className="project-imgContainer">
                 <CSSTransition
                     key={count}
                     timeout={450}
@@ -54,7 +54,7 @@ const Projects = () => {
                 </CSSTransition>
             </TransitionGroup>
             <div className="project-buttonContainer">
-                <button className="button button--github"><a href="https://github.com/PioKl" target="_blank" rel="noopener noreferrer">Profil na github</a></button>
+                <button data-aos="fade-up" className="button button--github"><a href="https://github.com/PioKl" target="_blank" rel="noopener noreferrer">Profil na github</a></button>
             </div>
 
         </div>
