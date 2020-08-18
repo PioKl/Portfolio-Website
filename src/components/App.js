@@ -5,6 +5,8 @@ import Projects from './Projects';
 import Tools from './Tools';
 import AboutMe from './AboutMe';
 import Contact from './Contact';
+import Aos from 'aos';
+import "aos/dist/aos.css";
 
 function App() {
 
@@ -12,6 +14,11 @@ function App() {
   const [width, setWidth] = useState(window.innerWidth);
 
   useEffect(() => {
+    Aos.init({
+      duration: 2000,
+      once: true,
+    });
+
     const updateWindowInnerWith = () => {
       setWidth(window.innerWidth);
     };
