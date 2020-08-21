@@ -7,6 +7,7 @@ import AboutMe from './AboutMe';
 import Contact from './Contact';
 import Aos from 'aos';
 import "aos/dist/aos.css";
+import HeroMobile from './Mobile/HeroMobile';
 
 function App() {
 
@@ -35,8 +36,8 @@ function App() {
 
     isMobile ?
 
-      <div>
-        <h1>Test</h1>
+      <div className="container-mobile">
+        <HeroMobile />
       </div>
 
       :
