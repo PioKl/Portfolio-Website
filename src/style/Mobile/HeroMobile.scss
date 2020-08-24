@@ -1,7 +1,7 @@
 @import '../Base.scss';
 
 .heroMobile-container {
-    //height:86vh;
+    //height: 86vh;
     position: fixed;
     top: 0;
     left: 0;
@@ -10,7 +10,6 @@
     overflow: auto;
     //background: rgba(175, 19, 19, 0.603);
     padding: 2rem;
-
     /* Just to visualize the extent */
 
     /*     height: 100vh;
@@ -19,14 +18,22 @@
     overflow:hidden; */
 }
 
-.navigation-mobile {
+/* .navigation-mobile {
     //height: 5vh;
-    height: calc(5vh);
-}
+    //height: calc(5vh);
+    //height: calc(var(--vh, 1vh) * 10vh);
+} */
 
 .components-slider {
     //height: 95vh;
-    height: 77vh;
+    //height: 77vh;
+    height: 95%;
+
+    //height: 92%;
+    //height: 100vh;
+    //height: calc(var(--vh, 1vh) * 100vh);
+    //height: calc(100 * var(--vh));
+    //min-height: -webkit-fill-available;
 }
 
 
@@ -48,38 +55,56 @@
     background-color: rgba(128, 128, 128, 0.329);
 }
 
-
-
-
 .mainSite-mobile {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     //place-items: center;
+    /*     position: absolute;
+    top: 50%;
+    transform: translateY(-25%); */
 
     &__hero-info {
         //width: 50%;
         //margin: 0 auto;
+        /*        width: calc(100% - 2rem);
+        margin: 0 auto; */
         width: calc(100% - 2rem);
+        max-width: 60rem;
         margin: 0 auto;
     }
 
     &__heading {
         line-height: 2;
-        text-align: justify;
-        font-size: 1.8rem;
+        text-align: center;
+        //font-size: 1.8rem;
+        font-size: calc(18px + (26 - 18) * ((100vw - 320px) / (768 - 320)));
         font-family: $fontOne;
+
+        @media only screen and (min-device-width : 768px) and (max-device-width : 1199px) {
+            font-size: 3rem;
+        }
     }
 
     &__hero-buttons {
         display: flex;
+        width: 100%;
+        max-width: 60rem;
+        margin: 0 auto;
     }
 
     &__button {
         margin-right: 1rem;
         margin-left: 1rem;
         flex-wrap: wrap;
-        font-size: 1.2rem;
+        //font-size: 1.2rem;
+        font-size: calc(12px + (16 - 12) * ((100vw - 320px) / (768 - 320)));
+
+        @media only screen and (min-device-width : 768px) and (max-device-width : 1199px) {
+            font-size: 2.4rem;
+            //height: 5rem;
+            height: calc(65px + (70 - 65) * ((100vw - 768px) / (1199 - 768)));
+        }
     }
 }
 
@@ -94,6 +119,11 @@
     opacity: 1 !important;
     border: white solid 1px !important;
     background-color: transparent !important;
+
+    @media only screen and (min-device-width : 768px) and (max-device-width : 1199px) {
+        width: 4rem !important;
+        height: 4rem !important;
+    }
 }
 
 .swiper-pagination-bullet-active {
@@ -102,36 +132,11 @@
 
 
 
-/* .spr3 {
-    display: flex;
-    flex-direction: row;
-} */
-
-/* .wrapper {
-    max-height: 120px;
-    border: 1px solid #ddd;
-    display: flex;
-    overflow-x: auto;
-}
-
-.wrapper::-webkit-scrollbar {
-    width: 0;
-}
-
-.wrapper .item {
-    min-width: 98%;
-    height: 100%;
-    line-height: 110px;
-    text-align: center;
-    background-color: #fff;
-    margin-right: 2px;
-} */
-
-
 
 
 .navigationMobile {
-    height: 7vh;
+    //height: 7vh;
+    height: 5%;
 
     &__checkbox {
         display: none;
@@ -152,6 +157,12 @@
         text-align: center;
         cursor: pointer;
 
+        @media only screen and (min-device-width : 768px) and (max-device-width : 1199px) {
+            height: 5rem;
+            width: 5rem;
+            transform: translateX(-145%);
+        }
+
     }
 
     &__background {
@@ -166,17 +177,22 @@
         background-image: radial-gradient(orange, blue);
         z-index: 1000;
         transition: transform .8s cubic-bezier(0.86, 0, 0.07, 1);
+
         //transition: all .8s;
         //transform: translateZ();
+        @media only screen and (min-device-width : 768px) and (max-device-width : 1199px) {
+            height: 5rem;
+            width: 5rem;
+            transform: translateX(-145%);
+        }
     }
 
     &__nav {
         height: 100vh;
         position: fixed;
         top: 0;
-        left: 0;
+        left: -30%;
         z-index: 1500;
-
         opacity: 0;
         width: 0;
         transition: all .8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
@@ -236,7 +252,7 @@
 
     //FUNCTIONALITY
     &__checkbox:checked~&__background {
-        transform: scale(80);
+        transform: scale(100);
         /* Zablokowanie przesuwania */
         overflow-x: hidden;
         position: fixed;
@@ -245,6 +261,7 @@
     &__checkbox:checked~&__nav {
         opacity: 1;
         width: 100%;
+        left: 0;
     }
 
 
@@ -261,6 +278,10 @@
             height: 2px;
             background-color: $orange;
             display: inline-block;
+
+            @media only screen and (min-device-width : 768px) and (max-device-width : 1199px) {
+                width: 3rem;
+            }
         }
 
         &::before,
@@ -270,6 +291,10 @@
             left: 0;
             transition: all .2s;
             width: 1.5rem;
+
+            @media only screen and (min-device-width : 768px) and (max-device-width : 1199px) {
+                width: 2.5rem;
+            }
         }
 
 
@@ -301,6 +326,11 @@
         left: 0;
         width: 2rem;
         transform: rotate(135deg);
+
+        @media only screen and (min-device-width : 768px) and (max-device-width : 1199px) {
+            left: .25rem;
+            width: 2.5rem;
+        }
     }
 
     &__checkbox:checked+&__button &__icon::after {
@@ -308,5 +338,10 @@
         left: 0;
         width: 2rem;
         transform: rotate(-135deg);
+
+        @media only screen and (min-device-width : 768px) and (max-device-width : 1199px) {
+            left: .25rem;
+            width: 2.5rem;
+        }
     }
 }
