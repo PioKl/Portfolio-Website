@@ -1,0 +1,97 @@
+@import '../Base.scss';
+
+.toolsMobile {
+    display: grid;
+    //height: inherit;
+    height: 100%;
+
+    /*     display: flex;
+    flex-direction: column;
+    height: inherit;
+    justify-content: center; */
+    //width: 100%;
+    max-width: 60rem;
+    //max-height: calc(345px + (500 - 345) * ((100vw - 320px) / (1199 - 320)));
+    margin: 0 auto;
+
+
+    &__title {
+        //font-size: 1.8rem;
+        font-size: calc(18px + (26 - 18) * ((100vw - 320px) / (1199 - 320)));
+        text-align: center;
+        margin: 1rem 0;
+        font-family: $fontThree;
+
+        @media only screen and (min-device-width : 768px) and (max-device-width : 1199px) {
+            font-size: 3rem;
+        }
+    }
+
+    &__imagesContainer {
+        width: 100%;
+        height: 350px;
+        max-height: calc(350px + (500 - 350) * ((100vw - 320px) / (1199 - 320)));
+        display: grid;
+        justify-content: center;
+        //grid-template-columns: repeat(auto-fit, minmax(5rem, 7rem));
+        grid-template-columns: repeat(auto-fit, minmax(5rem, calc(70px + (80 - 50) * ((100vw - 320px) / (1199 - 320)))));
+
+        @media only screen and (min-device-width : 768px) and (max-device-width : 1199px) {
+            height: 900px;
+            max-height: calc(700px + (800 - 700) * ((100vw - 726px) / (1199 - 726)));
+            grid-template-columns: repeat(auto-fit, minmax(10rem, 15rem));
+        }
+
+    }
+
+    &__img {
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 60%;
+
+        &--html {
+            background-image: url(../../images/htmlImg.png);
+        }
+
+        &--js {
+            background-image: url(../../images/javascriptImg.png);
+        }
+
+        &--css {
+            background-image: url(../../images/cssImg.png);
+            background-size: 80%;
+        }
+
+        &--redux {
+            background-image: url(../../images/reduxImg.png);
+            background-size: 80%;
+        }
+
+        &--react {
+            background-image: url(../../images/reactImg.png);
+            background-size: 80%;
+        }
+
+        &--github {
+            background-image: url(../../images/githubImg.png);
+            background-size: 90%;
+        }
+
+        &--bootstrap {
+            background-image: url(../../images/bootstrapImg.png);
+            background-size: 100%;
+        }
+
+        &--visualStudioCode {
+            background-image: url(../../images/visualstudioImg.png);
+        }
+
+        &--git {
+            background-image: url(../../images/gitImg.png);
+        }
+
+        &--adobexD {
+            background-image: url(../../images/adobexD.png);
+        }
+    }
+}
