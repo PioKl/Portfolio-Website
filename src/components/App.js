@@ -20,17 +20,17 @@ function App() {
       once: true,
     });
 
-    const updateWindowInnerWith = () => {
+    const updateWindowInnerWidth = () => {
       setWidth(window.innerWidth);
     };
 
-    window.addEventListener("resize", updateWindowInnerWith);
+    window.addEventListener("resize", updateWindowInnerWidth);
 
-    return () => window.removeEventListener("resize", updateWindowInnerWith)
+    return () => window.removeEventListener("resize", updateWindowInnerWidth)
 
   }, []);
 
-  const isMobile = width <= 726;
+  const isMobile = width <= 1199;
 
   return (
 
