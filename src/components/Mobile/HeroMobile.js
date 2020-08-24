@@ -1,8 +1,9 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState/* , useEffect */ } from 'react';
 import '../../style/Mobile/HeroMobile.scss';
 import AboutMeMobile from './AboutMeMobile';
 import ToolsMobile from './ToolsMobile';
 import ContactMobile from './ContactMobile';
+import ProjectsMobile from './ProjectsMobile';
 
 
 
@@ -20,8 +21,22 @@ import 'swiper/components/scrollbar/scrollbar.scss';
 // install Swiper components
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
 
-
 const HeroMobile = () => {
+
+    /*     const [vh, setVh] = useState(window.innerHeight);
+    
+        useEffect(() => {
+            const updateWindowInnerHeight = () => {
+                setVh(window.innerHeight * 0.01);
+            };
+    
+            window.addEventListener("resize", updateWindowInnerHeight);
+    
+            return () => window.removeEventListener("resize", updateWindowInnerHeight)
+    
+        }, []);
+        document.documentElement.style.setProperty('--vh', `${vh}px`);
+        console.log(vh) */
 
     const swiperRef = useRef(null);
     const [checked, setChecked] = useState(false);
@@ -31,7 +46,7 @@ const HeroMobile = () => {
     }
     const params = {
         spaceBetween: 10,
-        initialSlide: 4,
+        initialSlide: 3,
         pagination: {
             //el: ".swiper-pagination",
             type: "bullets",
@@ -103,7 +118,7 @@ const HeroMobile = () => {
                         <h1 className="mainSite-mobile__heading">Cześć, jestem Piotr i tworzę aplikacje w React oraz strony internetowe!</h1>
                     </div>
                     <div className="mainSite-mobile__hero-buttons">
-                        <button onClick={() => { goToSlide(1) }} className="mainSite-mobile__button button">Sprawdź moje projekty</button>
+                        <button onClick={() => { goToSlide(1) }} className="mainSite-mobile__button button">Projekty</button>
                         <button onClick={() => { goToSlide(4) }} className="mainSite-mobile__button button">Kontakt</button>
                     </div>
                 </SwiperSlide>
@@ -113,7 +128,9 @@ const HeroMobile = () => {
                 <SwiperSlide>
                     <ToolsMobile />
                 </SwiperSlide>
-                <SwiperSlide>Slide 4</SwiperSlide>
+                <SwiperSlide>
+                    <ProjectsMobile />
+                </SwiperSlide>
                 <SwiperSlide>
                     <ContactMobile />
                 </SwiperSlide>
