@@ -1,0 +1,70 @@
+@import '../Base.scss';
+
+.contactMobile-container {
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    //justify-content: center;
+    align-items: center;
+    font-family: $fontFour;
+}
+
+.contactMobile-titleContainer {
+
+    margin: 1rem 0;
+
+    &__title {
+        font-size: calc(18px + (26 - 18) * ((100vw - 320px) / (768 - 320)));
+
+        @media only screen and (min-device-width : 768px) and (max-device-width : 1199px) {
+            font-size: 3rem;
+        }
+    }
+}
+
+.contactMobile-form {
+    display: grid;
+    gap: 0%;
+    width: 100%;
+    max-width: 60rem;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    &__input {
+        //padding: 1rem;
+        padding: calc(10px + (16 - 10) * ((100vw - 320px) / (768 - 320)));
+        margin: 1rem 0;
+        border-radius: .5rem;
+        border: 0;
+        background-color: rgba(255, 255, 255, 0.877);
+        font-family: inherit;
+
+        @media only screen and (min-device-width : 768px) and (max-device-width : 1199px) {
+            padding: calc(25px + (30 - 25) * ((100vw - 768px) / (1199 - 320)));
+            font-size: calc(18px + (26 - 18) * ((100vw - 320px) / (768 - 320)));
+        }
+
+        &--message {
+            height: 10rem;
+            resize: none;
+
+            @media only screen and (min-device-width : 768px) and (max-device-width : 1199px) {
+                height: 25rem;
+            }
+        }
+    }
+}
+
+.buttonMobile--submit {
+    margin: 1rem 0;
+    border-radius: .5rem;
+    //font-size: calc(12px + (16 - 12) * ((100vw - 320px) / (1199 - 320)));
+    font-size: calc(12px + (16 - 12) * ((100vw - 320px) / (768 - 320)));
+
+    @media only screen and (min-device-width : 768px) and (max-device-width : 1199px) {
+        font-size: 2.4rem;
+        height: 7.5rem;
+    }
+
+}
