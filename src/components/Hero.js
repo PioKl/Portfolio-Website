@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { /* useState */ } from 'react';
 import Scrollspy from 'react-scrollspy';
 import '../style/Hero.scss';
 
