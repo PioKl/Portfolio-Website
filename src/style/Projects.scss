@@ -4,7 +4,6 @@
 .projects-container {
     height: 100vh;
     //padding: 14rem 0;
-    display: grid;
     //place-items: center;
     width: 90%;
     /*     display: flex;
@@ -13,7 +12,8 @@
     /* grid-template-columns: repeat(2, 1fr);
     place-items: center; */
     display: grid;
-    grid-template-columns: repeat(2, 500px);
+    grid-template-columns: repeat(2, 1fr);
+    //grid-template-columns: repeat(2, 500px);
     grid-template-rows: 300px;
     grid-template-areas: "projectGrid projectImgGrid""buttonGrid buttonGrid";
     gap: 8%;
@@ -72,8 +72,12 @@
     }
 
     &__description {
-        font-size: 1.8rem;
-        line-height: 45px;
+        //font-size: 1.3rem;
+        //font-size: 1.8rem;
+        font-size: calc(13px + (23 - 13) * ((100vw - 1200px) / (1900 - 1200)));
+        //line-height: 45px;
+        line-height: calc(35px + (45 - 35) * ((100vw - 1200px) / (1900 - 1200)));
+        ;
         text-align: justify;
         font-family: $fontFour;
     }
