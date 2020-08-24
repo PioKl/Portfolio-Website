@@ -49,3 +49,12 @@ body {
     background-color: $dark;
     color: #fff;
 }
+
+html,
+body {
+    height: 100%;
+}
+
+div#root {
+    height: 100%;
+}
