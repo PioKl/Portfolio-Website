@@ -46,7 +46,7 @@ const HeroMobile = () => {
     }
     const params = {
         spaceBetween: 10,
-        initialSlide: 3,
+        initialSlide: 0,
         pagination: {
             //el: ".swiper-pagination",
             type: "bullets",
@@ -115,7 +115,7 @@ const HeroMobile = () => {
             <Swiper className='components-slider'{...params} ref={swiperRef} /* hashNavigation={true} */ /* slidesPerView={'auto'} */ >
                 <SwiperSlide className="mainSite-mobile">
                     <div className="mainSite-mobile__hero-info">
-                        <h1 className="mainSite-mobile__heading">Cześć, jestem Piotr i tworzę aplikacje w React oraz strony internetowe!</h1>
+                        <h1 className="mainSite-mobile__primary-title">Cześć, jestem Piotr i tworzę aplikacje w React oraz strony internetowe!</h1>
                     </div>
                     <div className="mainSite-mobile__hero-buttons">
                         <button onClick={() => { goToSlide(1) }} className="mainSite-mobile__button button">Projekty</button>
