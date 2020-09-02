@@ -1,6 +1,108 @@
 @import '../Base.scss';
+@import '../Mixins.scss';
+
 
 .heroMobile-container {
+    //height: 100%;
+    padding: 2rem;
+    position: fixed; //absolute
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    overflow: auto;
+}
+
+.components-slider {
+    height: 95%;
+}
+
+.mainSite-mobile {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 95% !important; //.swiper-slide nadpisuje, dlatego important
+    //background-color: red;
+
+
+    &__hero-info {
+        margin: 0 auto;
+    }
+
+    &__primary-title {
+        line-height: 2;
+        text-align: center;
+        font-size: calc(18px + (56 - 18) * ((100vw - 320px) / (1199 - 320)));
+        font-family: $fontOne;
+
+        @media (orientation: landscape) {
+            max-width: 70rem;
+            font-size: calc(10px + (40 - 10) * ((100vw - 320px) / (1199 - 320)));
+
+            @media screen and (min-width: 640px) and (max-width: 823px),
+            screen and (min-height: 280px) and (max-height: 414px) {
+                font-size: calc(10px + (20 - 10) * ((100vw - 320px) / (823 - 320)));
+            }
+        }
+    }
+
+    &__hero-buttons {
+        display: flex;
+        width: 100%;
+        //max-width: 75vw;
+        //margin: 0 auto;
+    }
+
+    &__button {
+        //Wyrównanie napisów w kole
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        border-radius: 50%;
+        width: 20vw;
+        height: 20vw;
+        margin-right: 1rem;
+        margin-left: 1rem;
+        font-size: calc(12px + (30 - 12) * ((100vw - 320px) / (768 - 320)));
+        padding: calc(5px + (26 - 5) * ((100vw - 320px) / (768 - 320)));
+
+        //Wyrównanie przycisków w kontenerze
+        margin: 0 auto;
+
+        /*         @media (min-width: $bp-medium) and (max-width: $bp-large) {
+            font-size: 3.6rem;
+        } */
+
+        @media (orientation: landscape) {
+            //font-size: 1.6rem;
+            font-size: calc(8px + (30 - 8) * ((100vw - 320px) / (1199 - 320)));
+            //width: 5vw;
+            //height: 5vw;
+            width: calc(18px + (40 - 18) * ((100vw - 320px) / (768 - 320)));
+            height: calc(18px + (40 - 18) * ((100vw - 320px) / (768 - 320)));
+
+            @media screen and (min-width: 640px) and (max-width: 823px),
+            screen and (min-height: 280px) and (max-height: 414px) {
+                font-size: calc(10px + (15 - 10) * ((100vw - 320px) / (823 - 320)));
+
+                width: calc(18px + (30 - 18) * ((100vw - 320px) / (823 - 320)));
+                height: calc(18px + (30 - 18) * ((100vw - 320px) / (823 - 320)));
+            }
+
+            //calc(12px + (30 - 12) * ((100vw - 320px) / (768 - 320)));
+
+            /*             @media (min-width: $bp-medium) and (max-width: $bp-large) {
+                font-size: 3rem;
+                width: 10vw;
+                height: 10vw;
+            } */
+        }
+    }
+}
+
+
+/* .heroMobile-container {
     //height: 86vh;
     position: fixed;
     top: 0;
@@ -10,19 +112,21 @@
     overflow: auto;
     //background: rgba(175, 19, 19, 0.603);
     padding: 2rem;
-    /* Just to visualize the extent */
+    height: 100%;
+    padding: 1rem 1rem;
+    //Just to visualize the extent
 
-    /*     height: 100vh;
-    width: 100%;
-    position:relative;
-    overflow:hidden; */
+    //height: 100vh;
+    //width: 100%;
+    //position:relative;
+    //overflow:hidden;
 }
 
-/* .navigation-mobile {
-    //height: 5vh;
-    //height: calc(5vh);
-    //height: calc(var(--vh, 1vh) * 10vh);
-} */
+//.navigation-mobile {
+//height: 5vh;
+//height: calc(5vh);
+//height: calc(var(--vh, 1vh) * 10vh);
+//}
 
 .components-slider {
     //height: 95vh;
@@ -60,15 +164,15 @@
     flex-direction: column;
     justify-content: space-evenly;
     //place-items: center;
-    /*     position: absolute;
-    top: 50%;
-    transform: translateY(-25%); */
+    //position: absolute;
+    //top: 50%;
+    //transform: translateY(-25%);
 
     &__hero-info {
         //width: 50%;
         //margin: 0 auto;
-        /*        width: calc(100% - 2rem);
-        margin: 0 auto; */
+        //width: calc(100% - 2rem);
+        //margin: 0 auto;
         width: calc(100% - 2rem);
         max-width: 60rem;
         margin: 0 auto;
@@ -106,9 +210,7 @@
             height: calc(65px + (70 - 65) * ((100vw - 768px) / (1199 - 768)));
         }
     }
-}
-
-
+} */
 
 
 
@@ -120,9 +222,17 @@
     border: white solid 1px !important;
     background-color: transparent !important;
 
-    @media only screen and (min-device-width : 768px) and (max-device-width : 1199px) {
-        width: 4rem !important;
-        height: 4rem !important;
+    @media screen and (min-width : $bp-medium) and (max-width : $bp-large) {
+        //width: 4rem !important;
+        //height: 4rem !important;
+        width: calc(50px + (60 - 50) * ((100vw - 768px) / (1199 - 768))) !important;
+        height: calc(50px + (60 - 50) * ((100vw - 768px) / (1199 - 768))) !important;
+
+        @media (orientation: landscape) {
+            margin-bottom: 1rem !important;
+            width: 3.5rem !important;
+            height: 3.5rem !important;
+        }
     }
 }
 
@@ -136,42 +246,49 @@
 
 .navigationMobile {
     //height: 7vh;
-    height: 5%;
+    //height: 5%;
+    height: calc(30px + (70 - 30) * ((100vw - 320px) / (1199 - 320)));
 
     &__checkbox {
         display: none;
     }
 
     &__button {
+        //border: 1px solid red;
         background-color: $dark;
-        height: 3rem;
-        width: 3rem;
-        position: absolute;
+        //height: 3rem;
+        //width: 3rem;
+        //calc(18px + (40 - 18) * ((100vw - 320px) / (768 - 320)));
+        @include navigationSize();
+        /*         position: absolute;
         left: 100%;
-        transform: translateX(-170%);
+        transform: translateX(-170%); */
+        position: absolute;
+        right: calc(0% + 2rem); //wartość paddingu z hero containera
         /*         top: 6rem;
         right: 6rem; */
         border-radius: 50%;
         z-index: 2000;
-        box-shadow: 0 1rem 3rem rgba(black, .1);
+        //box-shadow: 0 1rem 3rem rgba(black, .1);
         text-align: center;
         cursor: pointer;
 
-        @media only screen and (min-device-width : 768px) and (max-device-width : 1199px) {
+        /*         @media only screen and (min-device-width : 768px) and (max-device-width : 1199px) {
             height: 5rem;
             width: 5rem;
             transform: translateX(-145%);
-        }
+        } */
 
     }
 
     &__background {
-        height: 3rem;
-        width: 3rem;
+        //height: 3rem;
+        //width: 3rem;
+        @include navigationSize();
         border-radius: 50%;
         position: absolute;
-        left: 100%;
-        transform: translateX(-170%);
+        right: calc(0% + 2rem); //wartość paddingu z hero containera
+        //transform: translateX(-170%);
         //top: 6.5rem;
         //right: 6.5rem; 
         background-image: radial-gradient(orange, blue);
@@ -180,11 +297,11 @@
 
         //transition: all .8s;
         //transform: translateZ();
-        @media only screen and (min-device-width : 768px) and (max-device-width : 1199px) {
+        /*        @media only screen and (min-device-width : 768px) and (max-device-width : 1199px) {
             height: 5rem;
             width: 5rem;
             transform: translateX(-145%);
-        }
+        } */
     }
 
     &__nav {
@@ -219,9 +336,15 @@
         border: 0;
         background-color: transparent;
         color: white;
-        font-size: 2rem;
+        //font-size: 2rem;
+        font-size: calc(25px + (70 - 25) * ((100vw - 320px) / (1199 - 320)));
         font-family: $fontOne;
 
+        @media (orientation: landscape) {
+            font-size: calc(18px + (50 - 18) * ((100vw - 320px) / (1199 - 320)));
+        }
+
+        //to potem wykasowac te link i visited
         &:link,
         &:visited {
             display: inline-block;
@@ -275,11 +398,11 @@
         &::before,
         &::after {
             width: 2rem;
-            height: 2px;
+            height: 3px;
             background-color: $orange;
             display: inline-block;
 
-            @media only screen and (min-device-width : 768px) and (max-device-width : 1199px) {
+            @media screen and (min-width : $bp-medium) and (max-width : $bp-large) {
                 width: 3rem;
             }
         }
@@ -292,7 +415,7 @@
             transition: all .2s;
             width: 1.5rem;
 
-            @media only screen and (min-device-width : 768px) and (max-device-width : 1199px) {
+            @media screen and (min-width : $bp-medium) and (max-width : $bp-large) {
                 width: 2.5rem;
             }
         }
@@ -327,7 +450,7 @@
         width: 2rem;
         transform: rotate(135deg);
 
-        @media only screen and (min-device-width : 768px) and (max-device-width : 1199px) {
+        @media screen and (min-width : $bp-medium) and (max-width : $bp-large) {
             left: .25rem;
             width: 2.5rem;
         }
@@ -339,7 +462,7 @@
         width: 2rem;
         transform: rotate(-135deg);
 
-        @media only screen and (min-device-width : 768px) and (max-device-width : 1199px) {
+        @media screen and (min-width : $bp-medium) and (max-width : $bp-large) {
             left: .25rem;
             width: 2.5rem;
         }
