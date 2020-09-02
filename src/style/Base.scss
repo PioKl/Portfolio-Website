@@ -25,6 +25,14 @@ sans-serif;
 $fontFour: 'Josefin Sans',
 sans-serif;
 
+/* ==================
+    Break Points 
+====================*/
+//$bp-medium: 48.06em; //769px
+//$bp-large: 74.93em; // 1199px
+$bp-medium: 48em; //768px
+$bp-large: 74.93em; // 1199px
+
 *,
 *::before,
 *::after {
