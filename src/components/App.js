@@ -36,9 +36,9 @@ function App() {
 
     isMobile ?
 
-      <div className="container-mobile">
-        <HeroMobile />
-      </div>
+      //<div className="container-mobile">
+      <HeroMobile />
+      //</div>
 
       :
 
