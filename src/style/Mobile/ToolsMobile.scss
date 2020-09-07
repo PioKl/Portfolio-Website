@@ -1,14 +1,131 @@
 @import '../Base.scss';
 
 .toolsMobile {
+    display: flex;
+    flex-direction: column;
+    height: 85%;
+    max-width: 60rem;
+    margin: 0 auto;
+
+    @media screen and (min-width : 1024px) {
+        max-width: 80rem;
+    }
+
+    &__title {
+        font-size: calc(18px + (26 - 18) * ((100vw - 320px) / (1199 - 320)));
+        text-align: center;
+        margin: 1rem 0;
+        font-family: $fontThree;
+
+        @media screen and (min-width : $bp-medium) {
+            font-size: 3rem;
+        }
+
+        @media screen and (min-width : 1024px) {
+            font-size: 4.5rem;
+        }
+
+        @media (orientation: landscape) {
+            margin: 0 0 1rem 0;
+
+            @media screen and (min-width : 560px) and (max-width : 1023px) {
+                font-size: calc(15px + (20 - 15) * ((100vw - 560px) / (1024 - 560)));
+            }
+        }
+    }
+
+    &__imagesContainer {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        justify-content: center;
+        grid-template-columns: repeat(auto-fit, minmax(8rem, auto));
+
+        @media screen and (min-width : $bp-medium) {
+            grid-template-columns: repeat(auto-fit, minmax(10rem, 15rem));
+        }
+
+        @media screen and (min-width: 1024px) {
+            grid-template-columns: repeat(auto-fit, minmax(15rem, 20rem));
+        }
+
+        @media (orientation: landscape) {
+            @media screen and (min-width:800px) {
+                grid-template-columns: repeat(auto-fit, minmax(8rem, auto));
+            }
+
+            @media screen and (min-width:1024px) {
+                grid-template-columns: repeat(auto-fit, minmax(10rem, 15rem));
+            }
+        }
+
+    }
+
+    &__img {
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 60%;
+
+        &--html {
+            background-image: url(../../images/htmlImg.png);
+        }
+
+        &--js {
+            background-image: url(../../images/javascriptImg.png);
+        }
+
+        &--css {
+            background-image: url(../../images/cssImg.png);
+            background-size: 80%;
+        }
+
+        &--redux {
+            background-image: url(../../images/reduxImg.png);
+            background-size: 80%;
+        }
+
+        &--react {
+            background-image: url(../../images/reactImg.png);
+            background-size: 80%;
+        }
+
+        &--github {
+            background-image: url(../../images/githubImg.png);
+            background-size: 90%;
+        }
+
+        &--bootstrap {
+            background-image: url(../../images/bootstrapImg.png);
+            background-size: 100%;
+        }
+
+        &--visualStudioCode {
+            background-image: url(../../images/visualstudioImg.png);
+        }
+
+        &--git {
+            background-image: url(../../images/gitImg.png);
+        }
+
+        &--adobexD {
+            background-image: url(../../images/adobexD.png);
+        }
+    }
+}
+
+
+/* .toolsMobile {
     display: grid;
     //height: inherit;
-    height: 100%;
+    //height: 100%;
+    height: 85%;
 
-    /*     display: flex;
-    flex-direction: column;
-    height: inherit;
-    justify-content: center; */
+    // display: flex;
+    //flex-direction: column;
+    //height: inherit;
+    //justify-content: center;
+
+
     //width: 100%;
     max-width: 60rem;
     //max-height: calc(345px + (500 - 345) * ((100vw - 320px) / (1199 - 320)));
@@ -34,7 +151,8 @@
         display: grid;
         justify-content: center;
         //grid-template-columns: repeat(auto-fit, minmax(5rem, 7rem));
-        grid-template-columns: repeat(auto-fit, minmax(5rem, calc(70px + (80 - 50) * ((100vw - 320px) / (1199 - 320)))));
+        //grid-template-columns: repeat(auto-fit, minmax(5rem, calc(70px + (80 - 50) * ((100vw - 320px) / (1199 - 320)))));
+        grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
 
         @media only screen and (min-device-width : 768px) and (max-device-width : 1199px) {
             height: 900px;
@@ -94,4 +212,4 @@
             background-image: url(../../images/adobexD.png);
         }
     }
-}
+} */
