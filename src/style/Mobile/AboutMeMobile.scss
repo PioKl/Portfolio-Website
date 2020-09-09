@@ -52,7 +52,7 @@
         line-height: calc(19.2px + (40 - 19.2) * ((100vw - 320px) / (768 - 320)));
         color: $gray;
         font-family: $fontFour;
-        font-size: calc(12px + (20 - 12) * ((100vw - 320px) / (768 - 320)));
+        font-size: calc(10.5px + (20 - 10.5) * ((100vw - 320px) / (768 - 320)));
 
         @media screen and (min-width : $bp-medium) and (max-width : $bp-large) {
             font-size: calc(25px + (40 - 25) * ((100vw - 768px) / (1199 - 768)));
