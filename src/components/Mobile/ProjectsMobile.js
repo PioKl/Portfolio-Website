@@ -36,9 +36,8 @@ const ProjectsMobile = () => {
             {/*         <div className="projectsMobile__titleContainer">
                 <h1 className="projectsMobile__title">Projekty</h1>
             </div> */}
-
+            <h1 className="projectsMobile__title">Projekty</h1>
             <div className="projectsMobile__projectsContainer">
-                <h1 className="projectsMobile__title">Projekty</h1>
                 <h2 className="projectsMobile__projectTitle">{data[count].title}</h2>
                 <TransitionGroup className="projectsMobile__imgContainer">
                     <CSSTransition
@@ -49,10 +48,10 @@ const ProjectsMobile = () => {
                         <a href={data[count].link} target="_blank" rel="noopener noreferrer"><img className="projectsMobile__img" src={projectImages[count]} alt="" /></a>
                     </CSSTransition>
                 </TransitionGroup>
-                <div className='projectsMobile__arrowButtons-container'>
-                    <i onClick={handlePreviousProject} className="projectsMobile__arrow-button fas fa-arrow-alt-circle-left"></i>
-                    <i onClick={handleNextProject} className="projectsMobile__arrow-button fas fa-arrow-alt-circle-right"></i>
-                </div>
+            </div>
+            <div className='projectsMobile__arrowButtons-container'>
+                <i onClick={handlePreviousProject} className="projectsMobile__arrow-button fas fa-arrow-alt-circle-left"></i>
+                <i onClick={handleNextProject} className="projectsMobile__arrow-button fas fa-arrow-alt-circle-right"></i>
             </div>
             <div className="projectsMobile__buttonContainer">
                 <button className="projectsMobile__buttonGithub button button--github"><a href="https://github.com/PioKl" target="_blank" rel="noopener noreferrer">Profil na github</a></button>
