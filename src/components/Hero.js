@@ -1,4 +1,4 @@
-import React, { /* useState */ } from 'react';
+import React, { useState, useEffect } from 'react';
 import Scrollspy from 'react-scrollspy';
 import '../style/Hero.scss';
 
@@ -45,6 +45,23 @@ const Hero = () => {
             setContact(true);
         }
      */
+    const getTime = () => {
+        const currentTime = new Date();
+        return ({
+            hours: currentTime.getHours() < 10 ? "0" + currentTime.getHours() : currentTime.getHours(),
+            minutes: currentTime.getMinutes() < 10 ? "0" + currentTime.getMinutes() : currentTime.getMinutes(),
+            seconds: currentTime.getSeconds(),
+        })
+    }
+    const [time, setTime] = useState(getTime);
+
+    useEffect(() => {
+        let timerInterval = setInterval(() => setTime(getTime(), 1000))
+        return () => {
+            clearTimeout(timerInterval)
+        }
+    }, [])
+
     return (
         <div id="mainSite" className="hero-container">
             <div className="navigation">
@@ -66,7 +83,7 @@ const Hero = () => {
                             <a href="#contact">Kontakt</a>
                         </li>
                     </ul>
-                    <li className="navigation__timeItem">18:56</li>
+                    <li className="navigation__timeItem">{time.hours}:{time.minutes}</li>
                 </ul>
             </div>
             <div className="scroll-navigation">
@@ -89,7 +106,7 @@ const Hero = () => {
 
             <div className="hero-info">
                 <h1 data-aos="fade-right" className="hero-info__heading">Cześć, jestem Piotr i tworzę aplikacje w React oraz strony internetowe!</h1>
-                <a href="#projects"><button /* onClick={handleScrollProjects} */ data-aos="fade-up" className="hero-info__button button">Sprawdź moje projekty</button></a>
+                <a href="#projects"><button /* onClick={handleScrollProjects} */ data-aos="fade-up" data-aos-offset="50" className="hero-info__button button">Sprawdź moje projekty</button></a>
             </div>
 
 
