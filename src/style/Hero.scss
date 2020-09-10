@@ -195,16 +195,19 @@
     //width: 19rem;
     width: calc(230px + (330 - 230) * ((100vw - 762px) / (1900 - 762)));
     font-family: $fontOne;
-    position: absolute;
+    /*     position: absolute;
     top: 50%;
     left: 50%;
+    transform: translate(-50%, -50%); */
     //transform: translateY(-50%);
-    transform: translate(-50%, -50%);
 
-    @media (min-width: 1200px) {
+    /*     @media (min-width: 1200px) {
         position: static;
         transform: translateY(50%);
-    }
+    } */
+    position: absolute;
+    top: 50%;
+    transform: translateY(-40%);
 
     &__heading {
         //font-size: 4.2rem;
