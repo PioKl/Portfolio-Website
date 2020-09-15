@@ -106,7 +106,7 @@ const Hero = () => {
 
             <div className="hero-info">
                 <h1 data-aos="fade-right" className="hero-info__heading">Cześć, jestem Piotr i tworzę aplikacje w React oraz strony internetowe!</h1>
-                <a href="#projects"><button /* onClick={handleScrollProjects} */ data-aos="fade-up" data-aos-offset="50" className="hero-info__button button">Sprawdź moje projekty</button></a>
+                <a href="#projects"><button /* onClick={handleScrollProjects} */ data-aos="fade-up" data-aos-offset="30" className="hero-info__button button">Sprawdź moje projekty</button></a>
             </div>
 
 
