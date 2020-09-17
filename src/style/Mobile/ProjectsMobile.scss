@@ -7,7 +7,7 @@
 
     height: 85%;
 
-    @media only screen and (min-device-width : 768px) and (max-device-width : 1199px) {
+    @media screen and (min-width : $bp-medium) and (max-width : $bp-large) {
         max-width: calc(600px + (900 - 600) * ((100vw - 768px) / (1199 - 768)));
     }
 
@@ -16,7 +16,7 @@
         text-align: center;
         margin: 1rem 0;
 
-        @media only screen and (min-device-width : 768px) and (max-device-width : 1199px) {
+        @media screen and (min-width : $bp-medium) and (max-width : $bp-large) {
             font-size: 3rem;
         }
 
@@ -38,22 +38,17 @@
         text-align: center;
         margin: 1rem 0;
 
-        @media only screen and (min-device-width : 768px) and (max-device-width : 1199px) {
+        @media screen and (min-width : $bp-medium) and (max-width : $bp-large) {
             font-size: 2.8rem;
         }
 
-        /*         @media (orientation: landscape) {
-            @media screen and (min-width : 560px) and (max-width : 1023px) {
-                font-size: calc(15px + (18 - 15) * ((100vw - 560px) / (1024 - 560)));
-            }
-        } */
     }
 
     &__imgContainer {
         margin-bottom: 2rem;
         height: calc(165px + (300 - 165) * ((100vw - 320px) / (1199 - 320)));
 
-        @media only screen and (min-device-width : 768px) and (max-device-width : 1199px) {
+        @media screen and (min-width : $bp-medium) and (max-width : $bp-large) {
             height: auto;
         }
     }
@@ -96,7 +91,6 @@
         border-radius: 5rem;
 
         @media screen and (min-width : $bp-medium) and (max-width : $bp-large) {
-            //font-size: 5rem;
             font-size: calc(70px + (100 - 70) * ((100vw - 768px) / (1199 - 320)));
         }
 
@@ -118,7 +112,6 @@
 
         @media screen and (min-width : $bp-medium) and (max-width : $bp-large) {
             font-size: 2.4rem;
-            //height: 5rem;
             height: calc(65px + (70 - 65) * ((100vw - 768px) / (1199 - 768)));
         }
 
