@@ -43,15 +43,6 @@
     width: 95%;
     max-width: 60rem;
     margin: auto;
-    /*     position: absolute;
-    top: 50%;
-    transform: translateY(-50%); */
-
-    /*     @media (orientation: portrait) {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-    } */
 
     @media screen and (min-width : 1024px) {
         max-width: 80rem;
@@ -63,7 +54,6 @@
         margin: 1rem 0;
         border-radius: .5rem;
         border: 0;
-        //background-color: rgba(255, 255, 255, 0.877);
         background-color: rgb(231, 231, 231);
         font-family: inherit;
         height: 0;
@@ -75,8 +65,6 @@
 
         @media (orientation: landscape) {
             margin: .5rem 0;
-            //padding: calc(10px + (25 - 10) * ((100vw - 568px) / (768 - 568)));
-            //font-size: calc(9px + (14 - 9) * ((100vw - 320px) / (768 - 320)));
 
             @media screen and (min-width : 653px) and (max-width: 654px),
             screen and (min-height: 270px) and (max-height: 280px) {
@@ -95,7 +83,6 @@
 
         &--message {
             height: 10rem;
-            //height: 0;
             resize: none;
 
             @media screen and (min-width : $bp-medium) and (max-width : $bp-large) {
@@ -117,11 +104,10 @@
     margin: 1rem 0;
     border-radius: .5rem;
     font-size: calc(14px + (16 - 14) * ((100vw - 320px) / (768 - 320)));
-    //height: calc(22px + (25 - 22) * ((100vw - 320px) / (768 - 320))) 0;
     padding: calc(22px + (25 - 22) * ((100vw - 320px) / (768 - 320))) 0;
     height: 0;
     line-height: 0;
-    //jak chce napis w przycisku wysrodkowac gdy mam height 0, to trzeba dodac line-heigh o takiej samej wartosci jak height
+    //jak chce napis w przycisku wysrodkowac gdy mam height 0, to trzeba dodac line-height o takiej samej wartosci jak height
 
 
 
@@ -154,7 +140,6 @@
 .contactMobile-notificationContainer {
     position: absolute;
     top: 0%;
-    //transform: translateY(-50%);
     background-color: green;
     height: 4rem;
     width: 20rem;
@@ -194,73 +179,3 @@
         opacity: 0;
     }
 }
-
-
-/* .contactMobile-container {
-    height: inherit;
-    display: flex;
-    flex-direction: column;
-    //justify-content: center;
-    align-items: center;
-    font-family: $fontFour;
-}
-
-.contactMobile-titleContainer {
-
-    margin: 1rem 0;
-
-    &__title {
-        font-size: calc(18px + (26 - 18) * ((100vw - 320px) / (768 - 320)));
-
-        @media only screen and (min-device-width : 768px) and (max-device-width : 1199px) {
-            font-size: 3rem;
-        }
-    }
-}
-
-.contactMobile-form {
-    display: grid;
-    gap: 0%;
-    width: 100%;
-    max-width: 60rem;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-
-    &__input {
-        //padding: 1rem;
-        padding: calc(10px + (16 - 10) * ((100vw - 320px) / (768 - 320)));
-        margin: 1rem 0;
-        border-radius: .5rem;
-        border: 0;
-        background-color: rgba(255, 255, 255, 0.877);
-        font-family: inherit;
-
-        @media only screen and (min-device-width : 768px) and (max-device-width : 1199px) {
-            padding: calc(25px + (30 - 25) * ((100vw - 768px) / (1199 - 320)));
-            font-size: calc(18px + (26 - 18) * ((100vw - 320px) / (768 - 320)));
-        }
-
-        &--message {
-            height: 10rem;
-            resize: none;
-
-            @media only screen and (min-device-width : 768px) and (max-device-width : 1199px) {
-                height: 25rem;
-            }
-        }
-    }
-}
-
-.buttonMobile--submit {
-    margin: 1rem 0;
-    border-radius: .5rem;
-    //font-size: calc(12px + (16 - 12) * ((100vw - 320px) / (1199 - 320)));
-    font-size: calc(12px + (16 - 12) * ((100vw - 320px) / (768 - 320)));
-
-    @media only screen and (min-device-width : 768px) and (max-device-width : 1199px) {
-        font-size: 2.4rem;
-        height: 7.5rem;
-    }
-
-} */
