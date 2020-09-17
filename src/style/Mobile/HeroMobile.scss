@@ -3,9 +3,8 @@
 
 
 .heroMobile-container {
-    //height: 100%;
     padding: 2rem;
-    position: fixed; //absolute
+    position: fixed;
     top: 0;
     left: 0;
     bottom: 0;
@@ -15,10 +14,6 @@
 
 .components-slider {
     height: 95%;
-
-    /*     @media (orientation: landscape) {
-        height: 87%;
-    } */
 }
 
 .mainSite-mobile {
@@ -26,7 +21,6 @@
     flex-direction: column;
     justify-content: space-evenly;
     height: 95% !important; //.swiper-slide nadpisuje, dlatego important
-    //background-color: red;
 
 
     &__hero-info {
@@ -53,8 +47,6 @@
     &__hero-buttons {
         display: flex;
         width: 100%;
-        //max-width: 75vw;
-        //margin: 0 auto;
     }
 
     &__button {
@@ -74,15 +66,8 @@
         //Wyrównanie przycisków w kontenerze
         margin: 0 auto;
 
-        /*         @media (min-width: $bp-medium) and (max-width: $bp-large) {
-            font-size: 3.6rem;
-        } */
-
         @media (orientation: landscape) {
-            //font-size: 1.6rem;
             font-size: calc(8px + (30 - 8) * ((100vw - 320px) / (1199 - 320)));
-            //width: 5vw;
-            //height: 5vw;
             width: calc(18px + (40 - 18) * ((100vw - 320px) / (768 - 320)));
             height: calc(18px + (40 - 18) * ((100vw - 320px) / (768 - 320)));
 
@@ -93,137 +78,10 @@
                 width: calc(18px + (30 - 18) * ((100vw - 320px) / (823 - 320)));
                 height: calc(18px + (30 - 18) * ((100vw - 320px) / (823 - 320)));
             }
-
-            //calc(12px + (30 - 12) * ((100vw - 320px) / (768 - 320)));
-
-            /*             @media (min-width: $bp-medium) and (max-width: $bp-large) {
-                font-size: 3rem;
-                width: 10vw;
-                height: 10vw;
-            } */
         }
     }
 }
 
-
-/* .heroMobile-container {
-    //height: 86vh;
-    position: fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    overflow: auto;
-    //background: rgba(175, 19, 19, 0.603);
-    padding: 2rem;
-    height: 100%;
-    padding: 1rem 1rem;
-    //Just to visualize the extent
-
-    //height: 100vh;
-    //width: 100%;
-    //position:relative;
-    //overflow:hidden;
-}
-
-//.navigation-mobile {
-//height: 5vh;
-//height: calc(5vh);
-//height: calc(var(--vh, 1vh) * 10vh);
-//}
-
-.components-slider {
-    //height: 95vh;
-    //height: 77vh;
-    height: 95%;
-
-    //height: 92%;
-    //height: 100vh;
-    //height: calc(var(--vh, 1vh) * 100vh);
-    //height: calc(100 * var(--vh));
-    //min-height: -webkit-fill-available;
-}
-
-
-
-
-
-
-
-
-
-.spr {
-    text-align: center;
-    //height: 76vh !important;
-}
-
-.spr2 {
-    text-align: center;
-    //height: 76vh !important;
-    background-color: rgba(128, 128, 128, 0.329);
-}
-
-.mainSite-mobile {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    //place-items: center;
-    //position: absolute;
-    //top: 50%;
-    //transform: translateY(-25%);
-
-    &__hero-info {
-        //width: 50%;
-        //margin: 0 auto;
-        //width: calc(100% - 2rem);
-        //margin: 0 auto;
-        width: calc(100% - 2rem);
-        max-width: 60rem;
-        margin: 0 auto;
-    }
-
-    &__heading {
-        line-height: 2;
-        text-align: center;
-        //font-size: 1.8rem;
-        font-size: calc(18px + (26 - 18) * ((100vw - 320px) / (768 - 320)));
-        font-family: $fontOne;
-
-        @media only screen and (min-device-width : 768px) and (max-device-width : 1199px) {
-            font-size: 3rem;
-        }
-    }
-
-    &__hero-buttons {
-        display: flex;
-        width: 100%;
-        max-width: 60rem;
-        margin: 0 auto;
-    }
-
-    &__button {
-        margin-right: 1rem;
-        margin-left: 1rem;
-        flex-wrap: wrap;
-        //font-size: 1.2rem;
-        font-size: calc(12px + (16 - 12) * ((100vw - 320px) / (768 - 320)));
-
-        @media only screen and (min-device-width : 768px) and (max-device-width : 1199px) {
-            font-size: 2.4rem;
-            //height: 5rem;
-            height: calc(65px + (70 - 65) * ((100vw - 768px) / (1199 - 768)));
-        }
-    }
-} */
-
-
-/* .swiper-pagination {
-    //margin-top: 3rem !important;
-    //top: 95%;
-} */
-/* .swiper-pagination {
-    z-index: 0 !important;
-} */
 
 .swiper-pagination-bullet {
     width: 2rem !important;
@@ -233,8 +91,6 @@
     background-color: transparent !important;
 
     @media screen and (min-width : $bp-medium) and (max-width : $bp-large) {
-        //width: 4rem !important;
-        //height: 4rem !important;
         width: calc(50px + (60 - 50) * ((100vw - 768px) / (1199 - 768))) !important;
         height: calc(50px + (60 - 50) * ((100vw - 768px) / (1199 - 768))) !important;
 
@@ -255,8 +111,6 @@
 
 
 .navigationMobile {
-    //height: 7vh;
-    //height: 5%;
     height: calc(30px + (70 - 30) * ((100vw - 320px) / (1199 - 320)));
 
     &__checkbox {
@@ -264,55 +118,24 @@
     }
 
     &__button {
-        //border: 1px solid red;
         background-color: $dark;
-        //height: 3rem;
-        //width: 3rem;
-        //calc(18px + (40 - 18) * ((100vw - 320px) / (768 - 320)));
         @include navigationSize();
-        /*         position: absolute;
-        left: 100%;
-        transform: translateX(-170%); */
         position: absolute;
         right: calc(0% + 2rem); //wartość paddingu z hero containera
-        /*         top: 6rem;
-        right: 6rem; */
         border-radius: 50%;
         z-index: 2000;
-        //box-shadow: 0 1rem 3rem rgba(black, .1);
         text-align: center;
         cursor: pointer;
-
-        /*         @media only screen and (min-device-width : 768px) and (max-device-width : 1199px) {
-            height: 5rem;
-            width: 5rem;
-            transform: translateX(-145%);
-        } */
-
     }
 
     &__background {
-        //height: 3rem;
-        //width: 3rem;
         @include navigationSize();
         border-radius: 50%;
         position: absolute;
         right: calc(0% + 2rem); //wartość paddingu z hero containera
-        //transform: translateX(-170%);
-        //top: 6.5rem;
-        //right: 6.5rem; 
-        //background-image: radial-gradient(orange, blue);
         background-image: radial-gradient(orange, orangered);
         z-index: 1000;
         transition: transform .8s cubic-bezier(0.86, 0, 0.07, 1);
-
-        //transition: all .8s;
-        //transform: translateZ();
-        /*        @media only screen and (min-device-width : 768px) and (max-device-width : 1199px) {
-            height: 5rem;
-            width: 5rem;
-            transform: translateX(-145%);
-        } */
     }
 
     &__nav {
@@ -324,8 +147,6 @@
         opacity: 0;
         width: 0;
         transition: all .8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-        //transition: all .5s;
-        //transform: translateZ();
     }
 
     &__list {
@@ -347,7 +168,6 @@
         border: 0;
         background-color: transparent;
         color: white;
-        //font-size: 2rem;
         font-size: calc(25px + (70 - 25) * ((100vw - 320px) / (1199 - 320)));
         font-family: $fontOne;
 
@@ -356,7 +176,7 @@
         }
 
         //to potem wykasowac te link i visited
-        &:link,
+        /*         &:link,
         &:visited {
             display: inline-block;
             font-size: 3rem;
@@ -373,7 +193,7 @@
                 margin-right: 1.5rem;
                 display: inline-block;
             }
-        }
+        } */
 
         &:hover,
         &:active {
@@ -402,8 +222,8 @@
     //ICON
     &__icon {
         position: relative;
-        //margin-top: 1.5rem;
         top: 50%;
+        transform: translateY(-50%);
 
         &,
         &::before,
@@ -443,20 +263,12 @@
         }
     }
 
-    /*     &__button:hover &__icon::before {
-        top: -1rem;
-    }
-
-    &__button:hover &__icon::after {
-        top: 1rem;
-    } */
-
     &__checkbox:checked+&__button &__icon {
         background-color: transparent;
     }
 
     &__checkbox:checked+&__button &__icon::before {
-        top: 0;
+        top: -25%;
         left: 0;
         width: 2rem;
         transform: rotate(135deg);
@@ -468,7 +280,7 @@
     }
 
     &__checkbox:checked+&__button &__icon::after {
-        top: 0;
+        top: -25%;
         left: 0;
         width: 2rem;
         transform: rotate(-135deg);
