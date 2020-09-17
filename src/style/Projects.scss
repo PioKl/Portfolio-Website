@@ -3,17 +3,9 @@
 
 .projects-container {
     height: 100vh;
-    //padding: 14rem 0;
-    //place-items: center;
     width: 90%;
-    /*     display: flex;
-    place-items: center; */
-
-    /* grid-template-columns: repeat(2, 1fr);
-    place-items: center; */
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    //grid-template-columns: repeat(2, 500px);
     grid-template-rows: 300px;
     grid-template-areas: "projectGrid projectImgGrid""buttonGrid buttonGrid";
     gap: 8%;
@@ -22,12 +14,7 @@
 
 .project {
     width: 100%;
-    //margin-right: 2rem;
     grid-area: projectGrid;
-    //align-self: center;
-
-    /*     display: grid;
-    gap: 2%; */
     display: flex;
     flex-direction: column;
 
@@ -42,13 +29,11 @@
         display: flex;
         width: 10rem;
         justify-content: space-between;
-        //margin-right: 3rem;
     }
 
     &__title {
-        //font-size: calc(18px + (44 - 18) * ((100vw - 762px) / (1900 - 762)));
         font-size: 2.6rem;
-        align-self: flex-end; //center
+        align-self: flex-end;
         font-family: $fontFour;
     }
 
@@ -72,44 +57,22 @@
     }
 
     &__description {
-        //font-size: 1.3rem;
-        //font-size: 1.8rem;
         font-size: calc(13px + (23 - 13) * ((100vw - 1200px) / (1900 - 1200)));
-        //line-height: 45px;
         line-height: calc(35px + (45 - 35) * ((100vw - 1200px) / (1900 - 1200)));
-        ;
         text-align: justify;
         font-family: $fontFour;
     }
 }
 
-/* .project-imgContainer {
-    width: 705px;
-    height: 476px;
-} */
-
 .project-imgContainer {
     grid-area: projectImgGrid;
-    //align-self: baseline;
-    //align-self: center;
 
     &__img {
         width: 100%;
         height: 100%;
-        //box-shadow: inset 0 0 10px white;
-        //object-fit: scale-down;
-        //object-fit: cover;
         box-shadow: 0 0 1px 0px white;
     }
 }
-
-
-//Wszystko ma 1525/805    137.5px
-
-//Obrazek 705/476
-//Kontener z napisami 636/502
-//Napis Projekt 1  czcionka 50px, line 57
-//Opis 24px line 45
 
 
 /* ANIMATIONS */
@@ -137,14 +100,9 @@
     grid-area: buttonGrid;
     width: 25rem;
     justify-self: center;
-    //align-self: end;
     transform: translateY(100%);
 }
 
 .button--github {
     font-size: calc(14px + (20 - 14) * ((100vw - 762px) / (1900 - 762)));
 }
-
-/* .spr {
-    //margin: auto 0;
-} */
