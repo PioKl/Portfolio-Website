@@ -15,11 +15,6 @@
 
     @media (orientation: landscape) {
         max-width: 86.3%;
-
-        /*         @media screen and (min-width : $bp-medium) and (max-width : $bp-large) {
-            max-height: 83%;
-            justify-content: space-around;
-        } */
     }
 
     &__title {
@@ -47,7 +42,6 @@
 
     &__description {
         text-align: justify;
-        //line-height: 19.2px;
         line-height: calc(19.2px + (40 - 19.2) * ((100vw - 320px) / (768 - 320)));
         color: $gray;
         font-family: $fontFour;
@@ -58,11 +52,6 @@
             line-height: calc(35px + (60 - 35) * ((100vw - 768px) / (1199 - 768)));
             ;
         }
-
-        /*         @media screen and (min-width : $bp-medium) and (max-width : $bp-large) {
-            font-size: 2.4rem;
-            line-height: 36px;
-        } */
 
         @media (orientation: landscape) {
             line-height: 19.2px;
@@ -109,12 +98,10 @@
     display: inline-block;
     margin-top: 1.3rem;
     width: 80%;
-    //font-size: 1.2rem;
     font-size: calc(12px + (16 - 12) * ((100vw - 320px) / (768 - 320)));
 
     @media screen and (min-width : $bp-medium) and (max-width : $bp-large) {
         font-size: 2.4rem;
-        //height: 5rem;
         height: calc(65px + (70 - 65) * ((100vw - 768px) / (1199 - 768)));
     }
 
