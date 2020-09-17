@@ -33,9 +33,6 @@ const ProjectsMobile = () => {
 
     return (
         <div className='projectsMobile'>
-            {/*         <div className="projectsMobile__titleContainer">
-                <h1 className="projectsMobile__title">Projekty</h1>
-            </div> */}
             <h1 className="projectsMobile__title">Projekty</h1>
             <div className="projectsMobile__projectsContainer">
                 <h2 className="projectsMobile__projectTitle">{data[count].title}</h2>
