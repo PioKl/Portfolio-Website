@@ -5,14 +5,6 @@ $dark: #010101;
 $orange: #F14D10;
 $gray: #E3D0D0;
 
-/* fonts fondamento, broadway, britannic */
-/* font-family: 'Fondamento', cursive; */
-
-//font-family: 'Goblin One', cursive;
-//font-family: 'Oswald', sans-serif;
-//font-family: 'Nunito', sans-serif;
-//font-family: 'Josefin Sans', sans-serif;
-
 /* =====================
         Fonts
 =======================*/
@@ -28,8 +20,6 @@ sans-serif;
 /* ==================
     Break Points 
 ====================*/
-//$bp-medium: 48.06em; //769px
-//$bp-large: 74.93em; // 1199px
 $bp-medium: 48em; //768px
 $bp-large: 74.93em; // 1199px
 
@@ -58,6 +48,7 @@ body {
     color: #fff;
 }
 
+//for mobile to take 100% height
 html,
 body {
     height: 100%;
