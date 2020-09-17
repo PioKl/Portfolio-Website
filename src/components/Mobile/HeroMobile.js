@@ -1,12 +1,9 @@
-import React, { useRef, useState/* , useEffect */ } from 'react';
+import React, { useRef, useState } from 'react';
 import '../../style/Mobile/HeroMobile.scss';
 import AboutMeMobile from './AboutMeMobile';
 import ToolsMobile from './ToolsMobile';
 import ContactMobile from './ContactMobile';
 import ProjectsMobile from './ProjectsMobile';
-
-
-
 
 import SwiperCore, { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
 
@@ -23,21 +20,6 @@ SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
 
 const HeroMobile = () => {
 
-    /*     const [vh, setVh] = useState(window.innerHeight);
-    
-        useEffect(() => {
-            const updateWindowInnerHeight = () => {
-                setVh(window.innerHeight * 0.01);
-            };
-    
-            window.addEventListener("resize", updateWindowInnerHeight);
-    
-            return () => window.removeEventListener("resize", updateWindowInnerHeight)
-    
-        }, []);
-        document.documentElement.style.setProperty('--vh', `${vh}px`);
-        console.log(vh) */
-
     const swiperRef = useRef(null);
     const [checked, setChecked] = useState(false);
 
@@ -48,7 +30,6 @@ const HeroMobile = () => {
         spaceBetween: 10,
         initialSlide: 0,
         pagination: {
-            //el: ".swiper-pagination",
             type: "bullets",
             clickable: true
         },
@@ -58,28 +39,9 @@ const HeroMobile = () => {
             swiperRef.current.swiper.slideTo(number, 300, true);
         }
     };
-    /*     const goToMain = () => {
-            if (swiperRef.current && swiperRef.current.swiper) {
-                swiperRef.current.swiper.slideTo(0, 300, false);
-            }
-        };
-        const goToProjects = () => {
-            if (swiperRef.current && swiperRef.current.swiper) {
-                swiperRef.current.swiper.slideTo(1, 300, false);
-            }
-        }; */
+
     return (
         <div className="heroMobile-container">
-            {/*             <div className="navigation-mobile">
-                <ul>
-                    <button onClick={() => { goToSlide(0) }}>Strona główna</button>
-                    <button onClick={() => { goToSlide(1) }}>Projekty</button>
-                    <button onClick={() => { goToSlide(2) }}>Narzędzia</button>
-                    <button onClick={() => { goToSlide(3) }}>O mnie</button>
-                    <button onClick={() => { goToSlide(4) }}>Kontakt</button>
-                </ul>
-            </div> */}
-
             <div className="navigationMobile">
                 <input onChange={handleChecked} type="checkbox" checked={checked} className="navigationMobile__checkbox" id="navi-toggle" />
 
@@ -112,7 +74,7 @@ const HeroMobile = () => {
 
 
 
-            <Swiper className='components-slider'{...params} ref={swiperRef} /* hashNavigation={true} */ /* slidesPerView={'auto'} */ >
+            <Swiper className='components-slider'{...params} ref={swiperRef}>
                 <SwiperSlide className="mainSite-mobile">
                     <div className="mainSite-mobile__hero-info">
                         <h1 className="mainSite-mobile__primary-title">Cześć, jestem Piotr i tworzę aplikacje w React oraz strony internetowe!</h1>
@@ -123,30 +85,18 @@ const HeroMobile = () => {
                     </div>
                 </SwiperSlide>
                 <SwiperSlide >
-                    <AboutMeMobile />
+                    <ProjectsMobile />
                 </SwiperSlide>
                 <SwiperSlide>
                     <ToolsMobile />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <ProjectsMobile />
+                    <AboutMeMobile />
                 </SwiperSlide>
                 <SwiperSlide>
                     <ContactMobile />
                 </SwiperSlide>
             </Swiper>
-
-
-            {/*                 <Swiper {...params} ref={swiperRef} >
-                    <div key="1" className="spr">Slide 1</div>
-                    <div key="2" className="spr2">Slide 2</div>
-                    <div key="3">Slide 3</div>
-                    <div key="4">Slide 4</div>
-                    <div key="5">Slide 5</div>
-                </Swiper> */}
-
-            {/*                 <button onClick={goPrev}>Prev</button>
-                <button onClick={goNext}>Next</button> */}
         </div>
     );
 }
