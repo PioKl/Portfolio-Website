@@ -268,7 +268,7 @@
     }
 
     &__checkbox:checked+&__button &__icon::before {
-        top: -25%;
+        top: 0;
         left: 0;
         width: 2rem;
         transform: rotate(135deg);
@@ -280,7 +280,7 @@
     }
 
     &__checkbox:checked+&__button &__icon::after {
-        top: -25%;
+        top: 0;
         left: 0;
         width: 2rem;
         transform: rotate(-135deg);
