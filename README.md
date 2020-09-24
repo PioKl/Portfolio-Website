@@ -1,3 +1,5 @@
+https://piokl.github.io/Portfolio-Website/
+
 Własna strona utworzona za pomocą React, Hooks, HTML, CSS, SASS. Użyłem także biblioteki aos (biblioteka wspomagająca animacje fade-in itp.), scrollspy ("nasłuchiwanie", w jakim id strony znajduje się użytkownik, w celu nadania mu odpowiedniego wyglądu, klasy), react-transition-group (biblioteka ułatwiająca "przejścia" dla własnej "karuzeli", działanie opiera się na umieszczeniu zdjęć w tablicy i podczas wybierania kolejnego elementu karuzeli, tranisition-group powoduje efekt przejścia), emailjs (wspomaganie wysyłania maili). 
 
 
